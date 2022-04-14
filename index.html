@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<style type="text/css">
+    .container{
+    	width: 550px;
+    	height: 550px;
+    	border:5px double black;
+    	margin: 0 auto;
+    	background-color: darkgrey;
+    }
+		h2{
+			text-align: center;
+		}
+		
+
+	</style>
+</head>
+<body>
+<div class="container">
+<h2>UZ nomer</h2>
+ &nbsp;Лицо: <select id="Лицо">
+   <option value="select">Выберите..</option>
+   <option value="Физическое">Физическое </option>
+   <option value="Юридическое">Юридическое</option>
+</select>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Область: <select id="Область">
+   <option value="select">Выберите..</option>
+   <option value="40">Фергана</option>
+   <option value="60">Андижан</option>
+   <option value="50">Наманган</option>
+   <option value="01">Ташкент</option>	
+</select>
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Номер: <select id="Номер">
+   <option value="select">Выберите..</option>
+   <option value="111">111</option>
+   <option value="222">222</option>
+   <option value="001">001</option>  
+
+   <option value="101">101</option>
+   <option value="202">202</option>
+   <option value="110">110</option>	
+</select><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button value="Посмотреть" id="btn">Посмотреть</button>
+<br><br>
+Номер:<input type="text" name="" id="num">
+&nbsp;&nbsp;&nbsp;&nbsp;
+Цена:<input type="text" name="" id="Цена">
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" name="" id="numb">
+
+</div>
+
+
+
+
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		let Person=$("#Лицо").val()
+		let a=$("#Область").val()
+		let d=$("#Номер").val()
+		let sss=$("#numb").val()
+		let c=$("#Цена").val(d)
+
+
+	$("#btn").click(function(){
+		// // Лицо
+	let Person=$("#Лицо").val()
+	if (Person=='Юридическое') {
+	
+	Person=	$("#Область").val()+"|"+$("#Номер").val()+'A'+'A'+'A'		
+	}
+	let sss=$("#numb").val(Person)
+       
+
+		// Область
+
+		
+		let a=$("#Область").val()
+		if (a=='40' ) {
+			a=40+"|"+'A'+$("#Номер").val()+'A'+'A'
+		}
+		if (a=='60') {
+			a=60+"|"+'S'+$("#Номер").val()+'Q'+'A'
+		}
+		if (a=='50') {
+			a=50+"|"+'J'+$("#Номер").val()+'J'+'A'
+		}
+		if (a=='01') {
+			a='0'+1+"|"+'S'+$("#Номер").val()+'S'+'A'
+		}
+		let b=$("#num").val(a)
+		// let e=$("#Номер").val()
+		// alert(e)
+		// let num=$("#num").val(e)
+
+
+
+
+  //               // Номер        
+
+
+		let d=$("#Номер").val()
+		if (d=='111') {
+			d=15000000
+		}
+		if (d=='222') {
+			d=15000000
+		}if (d=='001') {
+			d=15000000
+		}
+		if (d=='101') {
+
+			d=500000
+		}
+		if (d=='202') {
+			d=500000
+		}if (d=='110') {
+			d=500000
+		}
+		let c=$("#Цена").val(d)
+		// alert(d)
+
+	})
+
+	})
+</script>
+</body>
+</html>
